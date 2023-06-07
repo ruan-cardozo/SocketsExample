@@ -38,15 +38,15 @@ public class GreetServer {
 		}
 	}
 	public void stop() {
-	try {
-		in.close();
-		out.close();
-		clientSocket.close();
-		serverSocket.close();
-	} catch (IOException e) {
-		System.out.println("Erro ao fechar o servidor");
+		try {
+			in.close();
+			out.close();
+			clientSocket.close();
+			serverSocket.close();
+		} catch (IOException e) {
+			System.out.println("Erro ao fechar o servidor");
+		}
 	}
-}
 
 	public static void main(String[] args){
 		GreetServer server=new GreetServer();
